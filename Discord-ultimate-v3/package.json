@@ -1,0 +1,59 @@
+{
+  "name": "discord-ultimate-v3",
+  "version": "0.0.3",
+  "description": "türk yapımı discord",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.dist.config.js",
+    "build-watch": "npm run build -- -w",
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "@google-cloud/translate": "^0.8.1",
+    "aframe": "^0.5.0",
+    "aframe-animation-component": "^3.2.5",
+    "aframe-layout-component": "^4.1.0",
+    "aframe-particle-system-component": "^1.0.10",
+    "all": "^0.0.0",
+    "axios": "^0.16.2",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "babelify": "^7.3.0",
+    "body-parser": "^1.17.1",
+    "bootstrap": "^3.3.7",
+    "browser-history": "^1.0.1",
+    "ejs": "~1.0.0",
+    "express": "^4.18.2",
+    "fresh": "^0.5.2",
+    "gl-matrix": "^2.3.2",
+    "indico.io": "^0.10.5",
+    "path": "^0.12.7",
+    "peer": "^0.2.8",
+    "prop-types": "^15.5.9",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-redux": "^5.0.6",
+    "react-router": "^3.0.5",
+    "react-speech-recognition": "^1.0.1",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-logger": "^3.0.1",
+    "redux-promise": "^0.5.3",
+    "redux-thunk": "^2.2.0",
+    "send": "^1.2.1",
+    "socket.io": "^2.5.1",
+    "uuid": "~2.0.1",
+    "webpack": "^2.5.1"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "es2015",
+      "stage-2"
+    ]
+  },
+  "devDependencies": {
+    "babel-preset-react": "^6.24.1"
+  }
+}
