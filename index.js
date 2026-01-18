@@ -11,33 +11,32 @@ var indico = require('indico.io')
 indico.apiKey = 'e5feeac8e479a303fab000f4b7e0287c'
 
 
-// import the Google Cloud Translate API
+
 const Translate = require('@google-cloud/translate')
-// instantiate a client
+
 const projectId = 'space-chat-166520'
 const translate = Translate({
   projectId: projectId,
   keyFilename: './servicekey.json'
 }) 
 
-// set up body parsing middleware
+
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-// serve up static files
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.get('/*', (req, res, next) => {
+app.get('*', (req, res, next) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
-// store languages of connected sockets ("state")
+
 let languages = [], namespaces = ['bubbles', 'knots', 'space', 'cubes']
 
 namespaces.forEach(namespace => setUpNamespace(namespace))
 
 function setUpNamespace (namespace) {
-  // create namespace as instance of io
+ 
   let nsp = io.of(`/${namespace}`)
 
   // set up socket listeners
@@ -121,6 +120,6 @@ function setUpNamespace (namespace) {
 }
 
 server.listen(process.env.PORT || 3002, () => {
-  console.log('listening on 3002 hey girrrlll')
+  console.log('tebriklar aga discord server açıldı')
 })
 
